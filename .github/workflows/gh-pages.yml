@@ -24,8 +24,6 @@ jobs:
         env:
           DEBUG: 'widget:*'
           NODE_ENV: ${{ steps.extract_branch.outputs.branch }}
-      - name: Copy assets
-        run: npm run-script copy-assets
       - name: Deploy to GitHub Pages
         if: ${{ success() }}
         uses: crazy-max/ghaction-github-pages@v2
