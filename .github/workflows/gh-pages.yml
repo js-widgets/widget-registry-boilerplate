@@ -22,6 +22,7 @@ jobs:
       - name: Build the registry locally
         run: npm run-script compile-widgets
         env:
+          DEBUG: 'widget:*'
           NODE_ENV: ${{ steps.extract_branch.outputs.branch }}
       - name: Copy assets
         run: npm run-script copy-assets
