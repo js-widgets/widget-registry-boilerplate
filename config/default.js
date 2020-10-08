@@ -14,7 +14,7 @@ module.exports = {
         // Protocol and domain of the service that hosts the registry data.
         baseUrl: 'https://js-widgets.github.io',
         // The path within the server above where the registry is stored. Defaults to the sandbox value.
-        registryPath: '/widget-registry-boilerplate/widget-registry-sandbox',
+        registryPath: '/widget-registry-boilerplate/widget-registry/sandbox',
       },
       // By default the destination is the same as the origin, we overwrite the registry after compilation.
       destination: defer(function () {
@@ -24,7 +24,7 @@ module.exports = {
     filesystem: {
       // Configure where the compiled registry will be stored.
       destination: {
-        directory: 'dist/widget-registry-boilerplate/widget-registry-sandbox',
+        directory: 'dist/widget-registry/sandbox',
       },
     },
   },
