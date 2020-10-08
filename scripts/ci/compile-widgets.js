@@ -43,8 +43,7 @@ const distDir = joinPath(
     // Copy all the files in the assets to the dist directory.
     await copyP(
       resolvePath('assets'),
-      resolvePath(distDir),
-      { filter: name => name !== 'README.md' }
+      resolvePath(distDir)
     )
 
     // Compile all the widgets and produce the registry.json.
