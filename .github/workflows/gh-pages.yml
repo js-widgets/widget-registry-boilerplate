@@ -15,10 +15,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install package dependencies
         run: npm ci
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
       - name: Build the registry locally
         run: npm run-script compile-widgets
         env:
-          NODE_ENV: ${GITHUB_REF##*/}
+          DEBUG: 'widget:*'
+          NODE_ENV: ${{ steps.extract_branch.outputs.branch }}
       - name: Copy assets
         run: npm run-script copy-assets
       - name: Deploy to GitHub Pages
