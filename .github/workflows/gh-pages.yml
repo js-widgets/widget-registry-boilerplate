@@ -24,6 +24,7 @@ jobs:
         env:
           DEBUG: 'widget:*'
           NODE_ENV: ${{ steps.extract_branch.outputs.branch }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy to GitHub Pages
         if: ${{ success() }}
         uses: crazy-max/ghaction-github-pages@v2
