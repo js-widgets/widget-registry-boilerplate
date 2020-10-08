@@ -6,11 +6,13 @@
 // Modules.
 const config = require('config');
 const { mkdir } = require('fs');
+const { ncp } = require('ncp');
 const { resolve: resolvePath, join: joinPath } = require('path');
 const { promisify } = require('util');
 const rimraf = require('rimraf');
 
 const compileWidgets = require('@js-widgets/compiler');
+const copyP = promisify(ncp);
 const mkdirP = promisify(mkdir);
 const rimrafP = promisify(rimraf);
 
@@ -37,6 +39,13 @@ const distDir = joinPath(
     // Delete the existing dist directory and re-create it.
     await rimrafP(distDir);
     await mkdirP(distDir, { recursive: true });
+
+    // Copy all the files in the assets to the dist directory.
+    await copyP(
+      resolvePath('assets'),
+      resolvePath(distDir),
+      { filter: name => name !== 'README.md' }
+    )
 
     // Compile all the widgets and produce the registry.json.
     const message = await compileWidgets(options);
