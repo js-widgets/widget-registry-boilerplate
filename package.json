@@ -1,6 +1,11 @@
 {
-  "name": "widget-registry-boilerplate",
+  "name": "@js-widgets/widget-registry-boilerplate",
   "description": "Boilerplate code to create your own widget registry.",
+  "private": false,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=10"
   },
@@ -11,7 +16,6 @@
     "type": "git",
     "url": "git@github.com:js-widgets/widget-registry-boilerplate.git"
   },
-  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^6.1.3",
