@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "repositoryUrl": "https://github.com/js-widgets/example-widget",
+    "shortcode": "example-widget",
+    "version": "v1.0.3",
+    "directoryUrl": "https://js-widgets.github.io/widget-registry/sandbox/example-widget/v1",
+    "files": [
+      "css/main.css",
+      "css/main.css.map",
+      "js/main.js",
+      "js/main.js.LICENSE.txt",
+      "js/main.js.map"
+    ],
+    "availableTranslations": [
+      "ar",
+      "de",
+      "en",
+      "es",
+      "esla",
+      "fr",
+      "it",
+      "ja",
+      "ko",
+      "pl",
+      "pt",
+      "ru",
+      "tr",
+      "zh-cn",
+      "zh-tw"
+    ],
+    "description": "This example contains documentation and example code for creating widgets using React.",
+    "settingsSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fields": {
+          "type": "object",
+          "properties": {
+            "button-text": {
+              "type": "string",
+              "title": "Button text",
+              "description": "Some random string to be displayed when the widget is rendered.",
+              "examples": [
+                "foobar"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "title": "Example Widget"
+  }
+]
