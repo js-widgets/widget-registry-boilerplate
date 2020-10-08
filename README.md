@@ -1,0 +1,3 @@
+# Widget Registry Boilerplate
+
+TBD
