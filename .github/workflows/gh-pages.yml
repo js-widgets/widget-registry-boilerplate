@@ -18,7 +18,7 @@ jobs:
       - name: Build the registry locally
         run: npm run-script compile-widgets
         env:
-          NODE_ENV: ${GITHUB_REF##*/}
+          NODE_ENV: ${{ ${GITHUB_REF##*/} }}
       - name: Copy assets
         run: npm run-script copy-assets
       - name: Deploy to GitHub Pages
