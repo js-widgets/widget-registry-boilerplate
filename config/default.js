@@ -45,7 +45,7 @@ module.exports = {
       //     widget assets.
       ghReleases: {
         // Authentication token for the GitHub API.
-        apiKey: process.env.GITHUB_API_KEY,
+        apiKey: process.env.GITHUB_TOKEN,
         apiUrl: 'https://api.github.com',
         headers: {
           Authorization: defer(function () {
