@@ -1,5 +1,8 @@
 # Widget Registry Boilerplate
 
+  - [Sandbox registry](https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/registry.json)
+  - [Production registry](https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/registry.json)
+
 ## Getting started
 
 1. On the [widget-registry-boilerplate](https://github.com/js-widgets/widget-registry-boilerplate) project page click the **"Use this template"** button to setup a new widget.

@@ -1,10 +1,3 @@
 module.exports = {
-  storage: {
-    remote: {
-      origin: {
-        // Overrides the default location of the registry location.
-        registryPath: "/widget-registry-boilerplate/widget-registry/sandbox",
-      },
-    },
-  },
+  // Put your overrides here. At the moment this is inheriting all the values from default.js.
 };
