@@ -4,7 +4,7 @@
 
 1. On the [widget-registry-boilerplate](https://github.com/js-widgets/widget-registry-boilerplate) project page click the **"Use this template"** button to setup a new widget.
 2. Give the new repository a **name** and a **description** and then click the "**Create repository from template**" button.
-3. Clone the new repository and change the project [**name**](https://github.com/js-widgets/example-widget/blob/master/package.json#L2), [**version**](https://github.com/js-widgets/example-widget/blob/master/package.json#L3), and [**homepage**](https://github.com/js-widgets/example-widget/blob/master/package.json#L4) inside **package.json**.
+3. Clone the new repository and change the project [**name**](https://github.com/js-widgets/widget-registry-boilerplate/blob/master/package.json#L2) inside **package.json**.
 4. Install the project dependencies using `npm install`.
 5. Rename the `master` (or `main`) branch to `sandbox` and create another branch, copy of it, with name `production`.
 
