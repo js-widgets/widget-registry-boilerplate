@@ -2,7 +2,7 @@
   {
     "repositoryUrl": "https://github.com/js-widgets/example-widget",
     "shortcode": "example-widget",
-    "version": "v1.0.4",
+    "version": "v1.1.0",
     "directoryUrl": "https://js-widgets.github.io/widget-registry/sandbox/example-widget/v1",
     "files": [
       "css/main.css",
