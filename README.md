@@ -68,7 +68,7 @@ If you want to include the widget to your site, use the CMS integrations like [D
 
 Alternatively, you can include it on your site manually for local testing:
 
-1. Open the [`registry.json`](http://js-widgets.github.io/widget/widget-registry/sandbox/registry.json) from the registry and locate the JSON object related to your widget.
+1. Open the [`registry.json`](https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/registry.json) from the registry and locate the JSON object related to your widget.
 2. Using the value of the `directoryUrl` attribute, append `/js/main.js` to it. For example:
 ```
 http://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-widget/v1/js/main.js
