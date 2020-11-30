@@ -5,7 +5,7 @@
 
 ## Getting started
 
-1. On the [widget-registry-boilerplate](https://github.com/js-widgets/widget-registry-boilerplate) project page click the **"Use this template"** button to setup a new widget.
+1. On the [widget-registry-boilerplate](https://github.com/js-widgets/widget-registry-boilerplate) project page click the **"Use this template"** button to setup a new widget registry.
 2. Give the new repository a **name** and a **description** and then click the "**Create repository from template**" button.
 3. Clone the new repository and change the project [**name**](https://github.com/js-widgets/widget-registry-boilerplate/blob/master/package.json#L2) inside **package.json**.
 4. Install the project dependencies using `npm install`.
