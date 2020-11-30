@@ -23,8 +23,8 @@
     "husky": "^4.3.0"
   },
   "dependencies": {
-    "@js-widgets/compiler": "^1.0.1",
-    "@js-widgets/ingestion-gh-releases": "^1.0.1",
+    "@js-widgets/compiler": "^1.0.2",
+    "@js-widgets/ingestion-gh-releases": "^1.0.2",
     "config": "^3.3.1",
     "ncp": "^2.0.0",
     "rimraf": "^3.0.2"
