@@ -6,7 +6,7 @@ request, the GitHub Actions CI script will compile the updated widgets and uploa
 appropriate registry. The appropriate registry will be determined depending on what branch the pull
 request was merged onto (`sandbox` or `production`).
 
-A pull request to the  `registry.json` will typically look like:
+A pull request to the `registry.json` will typically look like:
 
 ```diff
 --- a/metadata/registry.json

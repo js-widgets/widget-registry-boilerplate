@@ -41,15 +41,12 @@ const distDir = joinPath(
     await mkdirP(distDir, { recursive: true });
 
     // Copy all the files in the assets to the dist directory.
-    await copyP(
-      resolvePath('assets'),
-      resolvePath(distDir)
-    )
+    await copyP(resolvePath('assets'), resolvePath(distDir));
 
     // Compile all the widgets and produce the registry.json.
     const message = await compileWidgets(options);
     console.log(message);
- } catch (error) {
+  } catch (error) {
     console.log(error);
   }
 })();
