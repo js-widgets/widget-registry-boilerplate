@@ -18,7 +18,7 @@
           instanceId,
           language,
           origin,
-          onRenderFinish
+          onRenderFinish,
         );
       });
     } catch (err) {

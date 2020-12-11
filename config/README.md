@@ -1,4 +1,5 @@
 # Configuration Management
+
 This project uses the [`config`](https://npmjs.com/package/config) module for configuration
 management. Please check the documentation to learn more on how to manage configuration and
 overrides per environment.
