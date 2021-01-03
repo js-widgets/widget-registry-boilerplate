@@ -24,7 +24,8 @@ jobs:
           npm run-script compile-widgets
           find dist -name 'registry.json' -type f -exec cp {} src/data/registry.json \;
           PUBLIC_URL=/widget-registry-boilerplate/catalog/${NODE_ENV} npm run-script build
-          rm -Rf ./dist/catalog
+          mkdir -p ./dist/catalog
+          rm -Rf ./dist/catalog/${NODE_ENV}
           mv ./build/ ./dist/catalog/${NODE_ENV}
         env:
           DEBUG: 'widget:*'

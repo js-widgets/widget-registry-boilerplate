@@ -1,7 +1,19 @@
+![GitHub](https://img.shields.io/github/license/js-widgets/widget-registry-boilerplate?style=flat-square) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/js-widgets/widget-registry-boilerplate/Publish%20Registry?style=flat-square)
+
 # Widget Registry Boilerplate
 
-- [Sandbox registry](https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/registry.json)
-- [Production registry](https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/registry.json)
+This project generates a static site with a catalog of all your widgets. This includes the ability
+to search and navigate widgets, as well as document your widgets in a beautiful website. Try out the
+examples.
+
+- [![](https://img.shields.io/badge/sandbox-catalog-success?style=flat-square&logo=html5)](https://js-widgets.github.io/widget-registry-boilerplate/catalog/sandbox)
+- [![](https://img.shields.io/badge/production-catalog-success?style=flat-square&logo=html5)](https://js-widgets.github.io/widget-registry-boilerplate/catalog/production)
+
+Below you will find the URL for the registry containing the JSON feed with the widget information.
+This is necessary when you are integrating the widgets with your CMS (like Drupal).
+
+- [![](https://img.shields.io/badge/sandbox-registry-success?style=flat-square&logo=json)](https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/registry.json)
+- [![](https://img.shields.io/badge/production-registry-success?style=flat-square&logo=json)](https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/registry.json)
 
 ## Getting started
 
