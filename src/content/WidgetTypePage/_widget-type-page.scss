@@ -1,0 +1,65 @@
+@import './mixins.scss';
+.widget-type {
+  &--tabs {
+    z-index: 1;
+    @include themed-tabs($carbon--theme--g100);
+    position: fixed;
+  }
+  .landing-page__banner {
+    padding-top: $spacing-05 + $spacing-07;
+  }
+  #tab-1__panel {
+    .bx--row--r1,
+    .bx--row--r2,
+    .bx--row--r3,
+    .bx--row--r4 {
+      .bx--label {
+        margin-top: $layout-02;
+      }
+    }
+  }
+  .bx--row {
+    &.bx--row--r1 {
+      margin-top: $layout-04;
+    }
+    &.bx--row--r2,
+    &.bx--row--r3,
+    &.bx--row--r4 {
+      margin-top: $layout-02;
+    }
+  }
+  .bx--row--r3 {
+    img {
+      border: 0.5px solid $text-01;
+    }
+  }
+  &__heading--wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__heading {
+    align-self: center;
+    display: flex;
+    &--icon {
+      align-self: center;
+      margin-left: -$layout-03;
+    }
+  }
+  &__heading--repo-link {
+    align-self: center;
+  }
+  &--settings-warning {
+    display: flex;
+    margin: $layout-02 0;
+    font-style: italic;
+    svg {
+      margin-right: $spacing-02;
+      min-width: 16px;
+    }
+  }
+  &--settings-values {
+    .bx--list__item {
+      margin-bottom: $layout-03;
+    }
+  }
+}

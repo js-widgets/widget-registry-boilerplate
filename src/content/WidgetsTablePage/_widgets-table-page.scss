@@ -1,0 +1,10 @@
+@import './overrides.scss';
+@import '../../components/WidgetsTable/widgets-table.scss';
+
+.widgets-table-page {
+  margin-top: $layout-04;
+  .bx--row {
+    padding-top: $spacing-05;
+    padding-bottom: $spacing-05;
+  }
+}

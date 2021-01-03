@@ -1,0 +1,9 @@
+@import '~carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family.scss';
+@import '~carbon-components/scss/globals/scss/vendor/@carbon/layout/scss/breakpoint.scss';
+@import '~carbon-components/scss/globals/scss/typography.scss';
+@import '~carbon-components/scss/globals/scss/vars.scss';
+
+@import './content/HomePage/home-page.scss';
+@import './content/WidgetsTablePage/widgets-table-page.scss';
+@import './content/WidgetTypePage/widget-type-page.scss';
+@import './components/Info/info.scss';

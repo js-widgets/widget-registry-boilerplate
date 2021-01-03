@@ -30,10 +30,7 @@ options = ['storage', 'pluginConfig'].reduce(
   options,
 );
 
-const distDir = joinPath(
-  rootDir,
-  options.storage.filesystem.destination.directory,
-);
+const distDir = joinPath(rootDir, options.storage.filesystem.destination.directory);
 (async () => {
   try {
     // Delete the existing dist directory and re-create it.

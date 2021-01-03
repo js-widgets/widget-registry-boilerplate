@@ -14,12 +14,7 @@
         if (typeof context[renderFunctionName] !== 'function') {
           return;
         }
-        context[renderFunctionName](
-          instanceId,
-          language,
-          origin,
-          onRenderFinish,
-        );
+        context[renderFunctionName](instanceId, language, origin, onRenderFinish);
       });
     } catch (err) {
       console.error(err.message());

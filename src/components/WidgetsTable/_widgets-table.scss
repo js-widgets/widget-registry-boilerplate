@@ -1,0 +1,29 @@
+.bx--list__langcodes {
+  display: flex;
+  flex-wrap: wrap;
+  .bx--list__item {
+    margin: 0 $spacing-01;
+    &::before {
+      content: '';
+    }
+  }
+}
+
+.bx--table-cell__owner,
+.bx--table-cell__name {
+  white-space: nowrap;
+}
+
+.bx--expandable-row {
+  h6 {
+    margin-top: $spacing-05;
+  }
+  p {
+    font-size: 100%;
+    margin-bottom: $spacing-06;
+  }
+  &--ctas {
+    margin-top: $spacing-03;
+    margin-bottom: $spacing-04;
+  }
+}
