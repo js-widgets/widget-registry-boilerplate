@@ -23,8 +23,9 @@ jobs:
         run: |
           npm run-script compile-widgets
           find dist -name 'registry.json' -type f -exec cp {} src/data/registry.json \;
-          PUBLIC_URL=/widget-registry-boilerplate/${NODE_ENV} npm run-script build
-          rsync -airvuz ./build/ ./dist/${NODE_ENV}
+          PUBLIC_URL=/widget-registry-boilerplate/catalog/${NODE_ENV} npm run-script build
+          rm -Rf ./dist/catalog
+          mv ./build/ ./dist/catalog/${NODE_ENV}
         env:
           DEBUG: 'widget:*'
           NODE_ENV: ${{ steps.extract_branch.outputs.branch }}
