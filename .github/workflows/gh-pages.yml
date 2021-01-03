@@ -19,8 +19,12 @@ jobs:
         shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
-      - name: Build the registry locally
-        run: npm run-script compile-widgets
+      - name: Build the registry and the catalog locally
+        run: |
+          npm run-script compile-widgets
+          find dist -name 'registry.json' -type f -exec cp {} src/data/registry.json \;
+          PUBLIC_URL=/widget-registry-boilerplate/${NODE_ENV} npm run-script build
+          rsync -airvuz ./build/ ./dist/${NODE_ENV}
         env:
           DEBUG: 'widget:*'
           NODE_ENV: ${{ steps.extract_branch.outputs.branch }}
