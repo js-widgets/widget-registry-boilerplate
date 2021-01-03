@@ -2,14 +2,15 @@
   {
     "repositoryUrl": "https://github.com/js-widgets/example-widget",
     "shortcode": "example-widget",
-    "version": "v1.1.0",
+    "version": "v1.2.1",
     "directoryUrl": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-widget/v1",
     "files": [
       "css/main.css",
       "css/main.css.map",
       "js/main.js",
       "js/main.js.LICENSE.txt",
-      "js/main.js.map"
+      "js/main.js.map",
+      "thumbnail.svg"
     ],
     "availableTranslations": [
       "ar",
@@ -41,13 +42,37 @@
               "title": "Button text",
               "description": "Some random string to be displayed when the widget is rendered.",
               "examples": [
-                "foobar"
+                "I am a button",
+                "Please, click me",
+                "CLICK"
               ]
             }
           }
         }
       }
     },
-    "title": "Example Widget"
+    "externalPeerDependencies": {
+      "react": {
+        "src": "https://unpkg.com/react@^17/umd/react.production.min.js"
+      },
+      "react-dom": {
+        "src": "https://unpkg.com/react-dom@^17/umd/react-dom.production.min.js"
+      },
+      "react-intl": {
+        "src": "https://unpkg.com/react-intl-bundle@^1/dist/react-intl.production.min.js"
+      }
+    },
+    "title": "Example Widget",
+    "assetManifest": {
+      "files": {
+        "main.css": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-widget/v1/css/main.css",
+        "main.js": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-widget/v1/js/main.js"
+      },
+      "entrypoints": [
+        "static/css/main.91ee73ca.css",
+        "css/main.css",
+        "js/main.js"
+      ]
+    }
   }
 ]
