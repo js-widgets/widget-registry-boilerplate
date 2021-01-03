@@ -16,11 +16,6 @@ export default function () {
       isSortable: false,
     },
     {
-      key: 'owner',
-      header: 'Owner',
-      isSortable: true,
-    },
-    {
       key: 'links',
       header: 'Links',
       isSortable: false,
