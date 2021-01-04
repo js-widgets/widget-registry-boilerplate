@@ -11,6 +11,21 @@ export default function () {
       isSortable: true,
     },
     {
+      key: 'status',
+      header: 'Status',
+      isSortable: true,
+    },
+    {
+      key: 'createdAt',
+      header: 'Created',
+      isSortable: true,
+    },
+    {
+      key: 'updatedAt',
+      header: 'Modified',
+      isSortable: true,
+    },
+    {
       key: 'translations',
       header: 'Translations',
       isSortable: false,

@@ -10,6 +10,13 @@ export default function (widgetTypes) {
       name: item['title'],
       description: item['description'],
       version: item['version'],
+      status: (
+        <CodeSnippet type="inline" className={`status--${item['status']}`}>
+          {item['status']}
+        </CodeSnippet>
+      ),
+      createdAt: new Date(item['createdAt']).toDateString(),
+      updatedAt: new Date(item['updatedAt']).toDateString(),
       translations: (
         <UnorderedList className="bx--list__langcodes">
           {item['availableTranslations'].map((langcode) => (
