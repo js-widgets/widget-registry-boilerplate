@@ -2,8 +2,9 @@
   {
     "repositoryUrl": "https://github.com/js-widgets/example-widget",
     "shortcode": "example-widget",
-    "version": "v1.2.1",
+    "version": "v1.3.0",
     "directoryUrl": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-widget/v1",
+    "tarballUrl": "/tmp/widget-definitions-phgubi/example-widget.tar.gz",
     "files": [
       "css/main.css",
       "css/main.css.map",
@@ -12,6 +13,8 @@
       "js/main.js.map",
       "thumbnail.svg"
     ],
+    "updatedAt": "2021-01-04T14:12:16.929Z",
+    "createdAt": "2021-01-04T14:12:16.929Z",
     "availableTranslations": [
       "ar",
       "de",
@@ -63,6 +66,7 @@
       }
     },
     "title": "Example Widget",
+    "status": "stable",
     "assetManifest": {
       "files": {
         "main.css": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-widget/v1/css/main.css",
