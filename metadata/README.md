@@ -15,6 +15,7 @@ A pull request to the `registry.json` will typically look like:
    {
      "repositoryUrl": "https://github.com/js-widgets/example-widget",
      "shortcode": "example-widget",
+     "status": "stable",
 -    "version": "v1.0.0"
 +    "version": "v1.1.0"
    }
