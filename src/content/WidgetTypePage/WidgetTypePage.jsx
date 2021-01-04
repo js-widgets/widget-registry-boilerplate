@@ -131,9 +131,21 @@ const WidgetTypePage = ({
                   </div>
                 )}
               </div>
-              <div className="bx--col-lg-8">
+              <div className="bx--col-lg-4">
                 <FormLabel>Version</FormLabel>
-                <pre className="widget-type--version">{widget.version}</pre>
+                <div className="bx--text">
+                  <CodeSnippet type="inline" className={`status--${widget.status}`}>
+                    {widget.status}
+                  </CodeSnippet>{' '}
+                  <code className="widget-type--version">{widget.version}</code>
+                </div>
+              </div>
+              <div className="bx--col-lg-4">
+                <FormLabel>Date</FormLabel>
+                <UnorderedList>
+                  <ListItem>Created on {new Date(widget.createdAt).toDateString()}</ListItem>
+                  <ListItem>Updated on {new Date(widget.updatedAt).toDateString()}</ListItem>
+                </UnorderedList>
               </div>
             </div>
             <article className="bx--row bx--row--r4">
