@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import Fuse from 'fuse.js';
 import PropTypes from 'prop-types';
 import {
+  CodeSnippet,
   DataTable,
+  Dropdown,
+  Link as CarbonLink,
+  ListItem,
   Table,
   TableBody,
   TableCell,
@@ -16,17 +20,71 @@ import {
   TableToolbar,
   TableToolbarContent,
   TableToolbarSearch,
+  UnorderedList,
 } from 'carbon-components-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight16 } from '@carbon/icons-react';
+import { ArrowRight16, UserAvatar16 } from '@carbon/icons-react';
 
 const WidgetsTable = ({ rows, headers, descriptions }) => {
   const [filtered, setFiltered] = useState(rows);
   const [keyword, setKeyword] = useState('');
 
   const fuse = new Fuse(rows, {
-    keys: ['name'],
+    keys: ['name', 'owner.name', 'status'],
   });
+
+  function renderCellValue(cell) {
+    // Render some of the values in a special way.
+    const id = cell.id.split(':')[1];
+    switch (id) {
+      case 'owner':
+        return typeof cell.value === 'object' ? (
+          <CarbonLink href={`mailto:${cell.value.email}`}>
+            <UserAvatar16 style={{ verticalAlign: 'middle' }} /> {cell.value.name}
+          </CarbonLink>
+        ) : null;
+      case 'translations':
+        return cell.value ? (
+          <UnorderedList className="bx--list__langcodes">
+            {cell.value.map((langcode) => (
+              <ListItem key={`item-${langcode}`}>
+                <CodeSnippet type="inline">{langcode}</CodeSnippet>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        ) : null;
+      case 'websegments':
+        return cell.value ? (
+          <UnorderedList className="bx--list__websegments">
+            {cell.value.map((ws, i) => (
+              <ListItem key={`ws-${i}`}>
+                <CodeSnippet type="inline">{ws}</CodeSnippet>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        ) : null;
+      case 'status':
+        return cell.value ? (
+          <CodeSnippet type="inline" className={`status--${cell.value}`}>
+            {cell.value}
+          </CodeSnippet>
+        ) : null;
+      case 'links':
+        return cell.value ? (
+          <Dropdown
+            id="default"
+            label="- Please select -"
+            items={cell.value}
+            itemToString={(item) => (item ? item.text : '')}
+            onChange={({ selectedItem: { id: url } }) => {
+              window.location.href = url;
+            }}
+          />
+        ) : null;
+      default:
+        return cell.value;
+    }
+  }
 
   return (
     <DataTable
@@ -52,10 +110,7 @@ const WidgetsTable = ({ rows, headers, descriptions }) => {
                 {headers.map((header) => (
                   <TableHeader
                     key={`header-${header.key}`}
-                    {...getHeaderProps({
-                      header,
-                      isSortable: header.isSortable,
-                    })}
+                    {...getHeaderProps({ header, isSortable: header.isSortable })}
                   >
                     {header.header}
                   </TableHeader>
@@ -70,7 +125,7 @@ const WidgetsTable = ({ rows, headers, descriptions }) => {
                     <TableExpandRow {...getRowProps({ row })}>
                       {row.cells.map((cell) => (
                         <TableCell key={cell.id} className={`bx--table-cell__${cell.info.header}`}>
-                          {cell.value}
+                          {renderCellValue(cell)}
                         </TableCell>
                       ))}
                     </TableExpandRow>

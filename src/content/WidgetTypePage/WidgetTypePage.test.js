@@ -20,6 +20,6 @@ test('renders banner, search, and table', () => {
   );
   expect(screen.getByRole('banner')).toBeInTheDocument();
   expect(screen.getByRole('tabpanel')).toBeInTheDocument();
-  expect(screen.getByRole('heading')).toBeInTheDocument();
-  expect(screen.getByRole('article')).toBeInTheDocument();
+  expect(screen.queryAllByRole('heading')).toHaveLength(5);
+  expect(screen.queryAllByRole('article')).toHaveLength(4);
 });

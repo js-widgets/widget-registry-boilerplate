@@ -1,4 +1,4 @@
-export default function () {
+export default function (rows) {
   return [
     {
       key: 'name',
@@ -31,6 +31,16 @@ export default function () {
       isSortable: false,
     },
     {
+      key: 'owner',
+      header: 'Owner',
+      isSortable: true,
+    },
+    {
+      key: 'websegments',
+      header: 'Web Segments',
+      isSortable: false,
+    },
+    {
       key: 'links',
       header: 'Links',
       isSortable: false,
@@ -40,5 +50,8 @@ export default function () {
       header: '',
       isSortable: false,
     },
-  ];
+  ].filter((headerData) =>
+    // Remove the headers that have no data.
+    rows.reduce((hasData, row) => hasData || !!row[headerData.key], false),
+  );
 }

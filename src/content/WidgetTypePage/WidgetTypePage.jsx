@@ -19,6 +19,8 @@ import AppFooter from '../../components/AppFooter';
 
 import buildCodeSnippet from './buildCodeSnippet';
 import {
+  ArrowRight16,
+  CopyLink16,
   DocumentTasks32,
   DocumentView32,
   LogoGithub16,
@@ -28,7 +30,6 @@ import {
 } from '@carbon/icons-react';
 import EmbedWidget from './EmbedWidget';
 
-// eslint-disable-next-line react/prop-types
 const WidgetTypePage = ({
   match: {
     params: { shortCode },
@@ -133,18 +134,30 @@ const WidgetTypePage = ({
               </div>
               <div className="bx--col-lg-4">
                 <FormLabel>Version</FormLabel>
-                <div className="bx--text">
-                  <CodeSnippet type="inline" className={`status--${widget.status}`}>
-                    {widget.status}
-                  </CodeSnippet>{' '}
+                <div>
+                  {widget.status ? (
+                    <>
+                      <CodeSnippet type="inline" className={`status--${widget.status}`}>
+                        {widget.status}
+                      </CodeSnippet>{' '}
+                    </>
+                  ) : (
+                    <></>
+                  )}
                   <code className="widget-type--version">{widget.version}</code>
                 </div>
               </div>
               <div className="bx--col-lg-4">
                 <FormLabel>Date</FormLabel>
                 <UnorderedList>
-                  <ListItem>Created on {new Date(widget.createdAt).toDateString()}</ListItem>
-                  <ListItem>Updated on {new Date(widget.updatedAt).toDateString()}</ListItem>
+                  <ListItem>
+                    Created on{' '}
+                    {widget.createdAt ? new Date(widget.createdAt).toDateString() : 'Unknown'}
+                  </ListItem>
+                  <ListItem>
+                    Updated on{' '}
+                    {widget.updatedAt ? new Date(widget.updatedAt).toDateString() : 'Unknown'}
+                  </ListItem>
                 </UnorderedList>
               </div>
             </div>
@@ -154,18 +167,46 @@ const WidgetTypePage = ({
                 <p className="widget-type--description">{widget.description}</p>
               </section>
               <aside className="bx--col-lg-4 bx--col-md-4 bx--col-sm-4">
-                <FormLabel>
-                  <Tooltip triggerText="Files">
-                    Technical information about the compiled assets of the widget.
-                  </Tooltip>
-                </FormLabel>
-                <UnorderedList>
-                  {widget.files.map((file, i) => (
-                    <ListItem key={`key-${i}`}>
-                      <CodeSnippet type="inline">{file}</CodeSnippet>
-                    </ListItem>
-                  ))}
-                </UnorderedList>
+                <div>
+                  <FormLabel>
+                    <Tooltip triggerText="Files">
+                      Technical information about the compiled assets of the widget.
+                    </Tooltip>
+                  </FormLabel>
+                  <UnorderedList>
+                    {widget.files.map((file, i) => (
+                      <ListItem key={`key-${i}`}>
+                        <CodeSnippet type="inline">{file}</CodeSnippet>
+                      </ListItem>
+                    ))}
+                  </UnorderedList>
+                </div>
+                <div>
+                  <FormLabel className="bx--label--inline--sm">
+                    <Tooltip triggerText="External dependencies">
+                      This widget expects the following dependecies to exist in the page when being
+                      rendered.
+                    </Tooltip>
+                  </FormLabel>
+                  <UnorderedList>
+                    {Object.keys(widget.externalPeerDependencies || {}).map((depName, i) => (
+                      <ListItem key={`key-${i}`}>
+                        <Tooltip triggerText={depName} renderIcon={CopyLink16}>
+                          <p id="tooltip-body">{widget.externalPeerDependencies[depName].src}</p>
+                          <div className="bx--tooltip__footer">
+                            <Button
+                              href={widget.externalPeerDependencies[depName].src}
+                              size="small"
+                              renderIcon={ArrowRight16}
+                            >
+                              Visit
+                            </Button>
+                          </div>
+                        </Tooltip>
+                      </ListItem>
+                    ))}
+                  </UnorderedList>
+                </div>
               </aside>
               <aside className="bx--col-lg-4 bx--col-md-4 bx--col-sm-4">
                 <FormLabel>Translations</FormLabel>
@@ -211,7 +252,7 @@ const WidgetTypePage = ({
             <div className="bx--row bx--row--r2">
               <div className="bx--col-lg-8">
                 <p>
-                  Use the following snippet of code to inject this widet in an static HTML page. If
+                  Use the following snippet of code to inject this widget in an static HTML page. If
                   you are looking for a more advanced integration, take a look at the{' '}
                   <Link href="https://drupal.org/project/widget_instance">Drupal module</Link>, and
                   the <Link href="https://www.youtube.com/watch?v=SdDEbP-vtZg">demo video</Link>.
