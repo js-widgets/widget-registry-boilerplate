@@ -39,8 +39,9 @@
   "dependencies": {
     "@carbon/icons-react": "^10.22.0",
     "@carbon/themes": "^10.24.0",
-    "@js-widgets/compiler": "^1.3.0",
-    "@js-widgets/ingestion-gh-releases": "^1.0.2",
+    "@js-widgets/compiler": "^1.4.0",
+    "@js-widgets/ingestion-gh-releases": "^1.4.0",
+    "@js-widgets/ingestion-tarball": "^1.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
