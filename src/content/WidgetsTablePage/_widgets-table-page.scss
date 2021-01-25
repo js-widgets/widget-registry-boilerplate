@@ -8,3 +8,18 @@
     padding-bottom: $spacing-05;
   }
 }
+
+.status {
+  &--stable {
+    background-color: chartreuse;
+  }
+  &--beta {
+    background-color: darkorange;
+  }
+  &--wip {
+    background-color: yellow;
+  }
+  &--deprecated {
+    background-color: gray;
+  }
+}

@@ -13,6 +13,8 @@ const WidgetsTablePage = () => {
     (carry, { shortcode, description }) => Object.assign(carry, { [shortcode]: description }),
     {},
   );
+  const rows = buildTableRowsFromRegistry(registry);
+  const headers = buildTableHeaders(rows);
   return (
     <>
       <AppHeader />
@@ -36,8 +38,8 @@ const WidgetsTablePage = () => {
           <div className="bx--col-lg-16">
             <WidgetsTable
               variant="dark"
-              headers={buildTableHeaders()}
-              rows={buildTableRowsFromRegistry(registry)}
+              headers={headers}
+              rows={rows}
               descriptions={descriptions}
             />
           </div>
