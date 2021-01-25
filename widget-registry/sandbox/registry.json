@@ -78,5 +78,56 @@
         "js/main.js"
       ]
     }
+  },
+  {
+    "repositoryUrl": "https://github.com/js-widgets/example-emojis",
+    "shortcode": "example-emojis",
+    "version": "v1.0.0",
+    "directoryUrl": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-emojis/v1",
+    "tarballUrl": "/tmp/widget-definitions-Lqplt8/example-emojis.tar.gz",
+    "files": [
+      "css/main.css",
+      "css/main.css.map",
+      "js/main.js",
+      "js/main.js.LICENSE.txt",
+      "js/main.js.map"
+    ],
+    "updatedAt": "2021-01-25T15:27:46.133Z",
+    "createdAt": "2021-01-25T15:27:46.133Z",
+    "availableTranslations": [
+      "en"
+    ],
+    "description": "This example contains emojis.",
+    "settingsSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fields": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    },
+    "externalPeerDependencies": {
+      "react": {
+        "src": "https://unpkg.com/react@^17/umd/react.production.min.js"
+      },
+      "react-dom": {
+        "src": "https://unpkg.com/react-dom@^17/umd/react-dom.production.min.js"
+      }
+    },
+    "title": "Example Emojis",
+    "status": "wip",
+    "assetManifest": {
+      "files": {
+        "main.css": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-emojis/v1/css/main.css",
+        "main.js": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-emojis/v1/js/main.js"
+      },
+      "entrypoints": [
+        "static/css/main.f58d7633.css",
+        "css/main.css",
+        "js/main.js"
+      ]
+    }
   }
 ]
