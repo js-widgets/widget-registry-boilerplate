@@ -119,5 +119,57 @@
         "js/main.js"
       ]
     }
+  },
+  {
+    "repositoryUrl": "https://github.com/js-widgets/example-calculator",
+    "shortcode": "example-calculator",
+    "version": "v1.0.1",
+    "directoryUrl": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-calculator/v1",
+    "tarballUrl": "/tmp/widget-definitions-PnGnfn/example-calculator.tar.gz",
+    "files": [
+      "css/main.css",
+      "css/main.css.map",
+      "js/main.js",
+      "js/main.js.LICENSE.txt",
+      "js/main.js.map",
+      "thumbnail.svg"
+    ],
+    "updatedAt": "2021-01-25T16:07:46.315Z",
+    "createdAt": "2021-01-25T16:07:46.315Z",
+    "availableTranslations": [
+      "en"
+    ],
+    "description": "This example contains a calculator.",
+    "settingsSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fields": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    },
+    "externalPeerDependencies": {
+      "react": {
+        "src": "https://unpkg.com/react@^17/umd/react.production.min.js"
+      },
+      "react-dom": {
+        "src": "https://unpkg.com/react-dom@^17/umd/react-dom.production.min.js"
+      }
+    },
+    "title": "Example Calculator",
+    "status": "wip",
+    "assetManifest": {
+      "files": {
+        "main.css": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-calculator/v1/css/main.css",
+        "main.js": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-calculator/v1/js/main.js"
+      },
+      "entrypoints": [
+        "static/css/main.5f7e2e23.css",
+        "css/main.css",
+        "js/main.js"
+      ]
+    }
   }
 ]
