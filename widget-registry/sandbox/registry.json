@@ -80,48 +80,6 @@
     }
   },
   {
-    "repositoryUrl": "https://github.com/js-widgets/example-calculator",
-    "shortcode": "example-calculator",
-    "version": "v1.0.6",
-    "directoryUrl": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-calculator/v1",
-    "tarballUrl": "/tmp/widget-definitions-fHujWV/example-calculator.tar.gz",
-    "files": [
-      "css/main.css",
-      "css/main.css.map",
-      "js/main.js",
-      "js/main.js.LICENSE.txt",
-      "js/main.js.map",
-      "thumbnail.svg"
-    ],
-    "updatedAt": "2021-01-25T22:39:28.483Z",
-    "createdAt": "2021-01-25T22:39:28.483Z",
-    "availableTranslations": [
-      "en"
-    ],
-    "description": "This example contains a calculator.",
-    "externalPeerDependencies": {
-      "react": {
-        "src": "https://unpkg.com/react@^17/umd/react.production.min.js"
-      },
-      "react-dom": {
-        "src": "https://unpkg.com/react-dom@^17/umd/react-dom.production.min.js"
-      }
-    },
-    "title": "Example Calculator",
-    "status": "wip",
-    "assetManifest": {
-      "files": {
-        "main.css": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-calculator/v1/css/main.css",
-        "main.js": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-calculator/v1/js/main.js"
-      },
-      "entrypoints": [
-        "static/css/main.2028f805.css",
-        "css/main.css",
-        "js/main.js"
-      ]
-    }
-  },
-  {
     "repositoryUrl": "https://github.com/js-widgets/example-emojis",
     "shortcode": "example-emojis",
     "version": "v1.0.4",
@@ -158,6 +116,48 @@
       },
       "entrypoints": [
         "static/css/main.7c29b23a.css",
+        "css/main.css",
+        "js/main.js"
+      ]
+    }
+  },
+  {
+    "repositoryUrl": "https://github.com/js-widgets/example-calculator",
+    "shortcode": "example-calculator",
+    "version": "v1.0.7",
+    "directoryUrl": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-calculator/v1",
+    "tarballUrl": "/tmp/widget-definitions-ih3zTp/example-calculator.tar.gz",
+    "files": [
+      "css/main.css",
+      "css/main.css.map",
+      "js/main.js",
+      "js/main.js.LICENSE.txt",
+      "js/main.js.map",
+      "thumbnail.svg"
+    ],
+    "updatedAt": "2021-01-26T09:37:10.934Z",
+    "createdAt": "2021-01-26T09:37:10.934Z",
+    "availableTranslations": [
+      "en"
+    ],
+    "description": "This example contains a calculator.",
+    "externalPeerDependencies": {
+      "react": {
+        "src": "https://unpkg.com/react@^17/umd/react.production.min.js"
+      },
+      "react-dom": {
+        "src": "https://unpkg.com/react-dom@^17/umd/react-dom.production.min.js"
+      }
+    },
+    "title": "Example Calculator",
+    "status": "stable",
+    "assetManifest": {
+      "files": {
+        "main.css": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-calculator/v1/css/main.css",
+        "main.js": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/sandbox/example-calculator/v1/js/main.js"
+      },
+      "entrypoints": [
+        "static/css/main.2028f805.css",
         "css/main.css",
         "js/main.js"
       ]
