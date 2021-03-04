@@ -2,15 +2,19 @@
   {
     "repositoryUrl": "https://github.com/js-widgets/example-widget",
     "shortcode": "example-widget",
-    "version": "v1.1.0",
+    "version": "v1.3.1",
     "directoryUrl": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/example-widget/v1",
+    "tarballUrl": "/tmp/widget-definitions-5bis34/example-widget.tar.gz",
     "files": [
       "css/main.css",
       "css/main.css.map",
       "js/main.js",
       "js/main.js.LICENSE.txt",
-      "js/main.js.map"
+      "js/main.js.map",
+      "thumbnail.svg"
     ],
+    "updatedAt": "2021-03-04T16:27:19.107Z",
+    "createdAt": "2021-03-04T16:27:19.107Z",
     "availableTranslations": [
       "ar",
       "de",
@@ -41,13 +45,122 @@
               "title": "Button text",
               "description": "Some random string to be displayed when the widget is rendered.",
               "examples": [
-                "foobar"
+                "I am a button",
+                "Please, click me",
+                "CLICK"
               ]
             }
           }
         }
       }
     },
-    "title": "Example Widget"
+    "externalPeerDependencies": {
+      "react": {
+        "src": "https://unpkg.com/react@^17/umd/react.production.min.js"
+      },
+      "react-dom": {
+        "src": "https://unpkg.com/react-dom@^17/umd/react-dom.production.min.js"
+      },
+      "react-intl": {
+        "src": "https://unpkg.com/react-intl-bundle@^1/dist/react-intl.production.min.js"
+      }
+    },
+    "title": "Example Widget",
+    "status": "stable",
+    "assetManifest": {
+      "files": {
+        "main.css": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/example-widget/v1/css/main.css",
+        "main.js": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/example-widget/v1/js/main.js"
+      },
+      "entrypoints": [
+        "static/css/main.8343b28c.css",
+        "css/main.css",
+        "js/main.js"
+      ]
+    }
+  },
+  {
+    "repositoryUrl": "https://github.com/js-widgets/example-calculator",
+    "shortcode": "example-calculator",
+    "version": "v1.0.7",
+    "directoryUrl": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/example-calculator/v1",
+    "tarballUrl": "/tmp/widget-definitions-5bis34/example-calculator.tar.gz",
+    "files": [
+      "css/main.css",
+      "css/main.css.map",
+      "js/main.js",
+      "js/main.js.LICENSE.txt",
+      "js/main.js.map",
+      "thumbnail.svg"
+    ],
+    "updatedAt": "2021-03-04T16:27:19.107Z",
+    "createdAt": "2021-03-04T16:27:19.107Z",
+    "availableTranslations": [
+      "en"
+    ],
+    "description": "This example contains a calculator.",
+    "externalPeerDependencies": {
+      "react": {
+        "src": "https://unpkg.com/react@^17/umd/react.production.min.js"
+      },
+      "react-dom": {
+        "src": "https://unpkg.com/react-dom@^17/umd/react-dom.production.min.js"
+      }
+    },
+    "title": "Example Calculator",
+    "status": "stable",
+    "assetManifest": {
+      "files": {
+        "main.css": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/example-calculator/v1/css/main.css",
+        "main.js": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/example-calculator/v1/js/main.js"
+      },
+      "entrypoints": [
+        "static/css/main.2028f805.css",
+        "css/main.css",
+        "js/main.js"
+      ]
+    }
+  },
+  {
+    "repositoryUrl": "https://github.com/js-widgets/example-emojis",
+    "shortcode": "example-emojis",
+    "version": "v1.0.4",
+    "directoryUrl": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/example-emojis/v1",
+    "tarballUrl": "/tmp/widget-definitions-5bis34/example-emojis.tar.gz",
+    "files": [
+      "css/main.css",
+      "css/main.css.map",
+      "js/main.js",
+      "js/main.js.LICENSE.txt",
+      "js/main.js.map",
+      "thumbnail.svg"
+    ],
+    "updatedAt": "2021-03-04T16:27:19.107Z",
+    "createdAt": "2021-03-04T16:27:19.107Z",
+    "availableTranslations": [
+      "en"
+    ],
+    "description": "This example contains emojis.",
+    "externalPeerDependencies": {
+      "react": {
+        "src": "https://unpkg.com/react@^17/umd/react.production.min.js"
+      },
+      "react-dom": {
+        "src": "https://unpkg.com/react-dom@^17/umd/react-dom.production.min.js"
+      }
+    },
+    "title": "Example Emojis",
+    "status": "wip",
+    "assetManifest": {
+      "files": {
+        "main.css": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/example-emojis/v1/css/main.css",
+        "main.js": "https://js-widgets.github.io/widget-registry-boilerplate/widget-registry/production/example-emojis/v1/js/main.js"
+      },
+      "entrypoints": [
+        "static/css/main.7c29b23a.css",
+        "css/main.css",
+        "js/main.js"
+      ]
+    }
   }
 ]
