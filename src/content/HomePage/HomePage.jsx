@@ -4,6 +4,7 @@ import { Breadcrumb, BreadcrumbItem, Button, Tabs, Tab } from 'carbon-components
 import AppHeader from '../../components/AppHeader';
 import AppFooter from '../../components/AppFooter';
 import { Launch32, ArrowRight16 } from '@carbon/icons-react';
+import { PropTypes } from 'prop-types';
 
 const HomePage = () => {
   const tabsProps = {
@@ -118,6 +119,17 @@ const HomePage = () => {
       </div>
     </>
   );
+};
+
+HomePage.propTypes = {
+  tabsProps: PropTypes.shape({
+    selected: PropTypes.number,
+    role: PropTypes.string,
+  }),
+  tabProps: PropTypes.shape({
+    tabIndex: PropTypes.number,
+    role: PropTypes.string,
+  }),
 };
 
 export default HomePage;

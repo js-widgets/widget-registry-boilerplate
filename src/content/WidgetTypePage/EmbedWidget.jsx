@@ -12,8 +12,11 @@ const EmbedWidget = ({ widget, doLoad, moreProps }) => {
   const htmlId = `widget-id--${widget.shortcode}--${JSON.stringify(moreProps)
     .split('')
     .reduce((res, char) => res + char.charCodeAt(0), 0)}`;
+  let className = moreProps.className || '';
+  className = `${className} widget-instance`.trim();
+  delete moreProps.className;
   const emptyWidget = (
-    <div id={htmlId} {...moreProps}>
+    <div id={htmlId} className={className} {...moreProps}>
       <InlineLoading />
     </div>
   );
