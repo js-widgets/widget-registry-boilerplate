@@ -1,3 +1,9 @@
+# This project is DEPRECATED
+
+See [`@js-widgets/webpack-cli`](https://github.com/js-widgets/webpack-cli).
+
+---
+
 ![GitHub](https://img.shields.io/github/license/js-widgets/widget-registry-boilerplate?style=flat-square) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/js-widgets/widget-registry-boilerplate/Publish%20Registry?style=flat-square)
 
 # Widget Registry Boilerplate
